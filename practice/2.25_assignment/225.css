@@ -1,0 +1,36 @@
+.wrapper {
+  margin-left:auto;
+  margin-right:auto;
+	width:90%;
+  border: 2px solid black;
+  padding: 1em 2em;
+}
+
+body {
+	background-color: #BEBEBE;
+	max-width: 1200px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+h1 {
+  font-size: .75em;
+}
+h2 {
+  font-size: 1.5em;
+  padding-left: .25em;
+  
+}
+.p-padding {
+  padding-top: .5em;
+}
+ul {
+  padding-top: .5em;
+  color:red;
+}
+
+@media (max-width: 426px) {
+    .wrapper {
+      padding: 0px;
+    }
+  }
