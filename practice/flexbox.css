@@ -1,90 +1,91 @@
-nav {
-    width: 100%;
+header {
     display: flex;
+    flex-direction: row;
+    background-color: #3E7CB1;
+    width: 100%;
+    height: 20vh;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    padding:0;
+  
+  }
+  
+  li {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+  }
+  nav{
+    display: flex;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 1200px;
+    width: 100vw;
     align-items: center;
     justify-content: center;
-}
-
-header {
-    padding: 2rem;
-    background-color:#3E7CB1
-}
-
-
-h1{
-    text-align: center;
-}
-body{
-    margin:0;
-    background-color: #f2f2f2
-    
-}
-
-
-
-p{
-    margin: 4rem;
-}
-ul{
+    padding:2rem;
+  
+  }
+  main {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    flex: 1;
+    background-color: #efefef;
+  
+  }
+  body{
+    background-color: #F2F2F2;
     display:flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding:0;
-    list-style-type: none;
-    border-bottom: 2px solid #3E7CB1
-}
-
-li {
-    font-weight: bold;
-    color: white;
-}
-
-.main-wrapper {
-    display:flex;
-    flex-direction: row;
-    align-items:stretch;
-    justify-content: center;
-    width: 90%;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.text-boxes {
-    border: 2px solid #39006c;
-    padding: 2rem;
-    margin-left:auto;
-    margin-right:auto;
-    background-color:white;
-}
-
-footer {
-    display:flex;
-    margin-top: 2rem;
+    flex-direction: column;
+    margin:0px;
+    min-height: 100vh;
+  }
+  
+  footer {
     background-color: #3E7CB1;
+    height: 20vh;
+  
+  }
+  
+  div{
+    padding: 2rem;
+    display: flex;
+    flex-direction:column;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+    
+  
+  }
+  
+  h3 {
+    margin-bottom: .3rem;
+  }
+  
+  .flex-item {
+    text-align:center;
+    margin-top:1rem;
+    margin-bottom:2rem;
+    background-color: white;
+    padding-top:.5rem;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  button {
+    background-color:blue;
+    padding: .5rem 1rem;
+    margin: 2rem 1rem;
     color:white;
     font-weight:bold;
-    justify-content: center;
-}
-
-
-@media (max-width: 426px) {
-    header {
-      padding: 1rem;
-    }
-    .main-wrapper {
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      margin:auto;
-      
-    }
-    .text-boxes {
-        margin-bottom: 2rem;
-    }
   
-    p {
-      margin: 1rem;
-    }
   }
+  img {
+    max-width:100%;
+  }
+  
+  
