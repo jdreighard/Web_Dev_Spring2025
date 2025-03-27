@@ -6,3 +6,7 @@ body {
   color: rgba(255, 255, 255, 0.87);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+.custom-shadow-green {
+  box-shadow: 0 4px 6px -1px rgba(72, 156, 36, 0.5), 0 2px 4px -1px rgba(72, 156, 36, 0.25);
+}

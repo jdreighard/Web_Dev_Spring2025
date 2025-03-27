@@ -1,0 +1,1 @@
+Just so you can see I have the folder structure set up (even though I won't be using the folders for my website)

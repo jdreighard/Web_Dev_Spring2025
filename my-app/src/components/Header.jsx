@@ -5,7 +5,7 @@ import MobileNav from './MobileNav'; // Import needed for mobile hamburger menu
 function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false); // variables for mobile menu 
   return (
-    <header className="fixed top-0 w-full h-40 bg-[#121111]">
+    <header className="fixed top-0 w-full h-20 bg-[#121111]">
       {/*Main header row*/}
       <div className="w-full max-w-screen-xl m-auto flex items-center justify-between p-3 h-auto mt-2rem">
         <img src ="/header_img.svg" alt ="Tech Image" width = "50px" height="50px"/>
