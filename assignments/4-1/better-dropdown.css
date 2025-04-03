@@ -1,0 +1,32 @@
+nav {
+  padding:10px;
+  background:black;
+}
+
+.dropdown {
+  display:none;
+  background: #555;
+  width:100%;
+}
+.dropdown.show {
+  display:block;
+}
+
+.dropdown a {
+  padding:10px;
+  display:block;
+  width: 100%;
+  color:white;
+  text-decoration:none;
+}
+body {
+  margin:0;
+}
+
+.caret {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.caret.rotate {
+  transform: rotate(180deg);
+}
