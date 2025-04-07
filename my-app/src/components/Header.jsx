@@ -49,7 +49,7 @@ function Header() {
           </div>
           
           {/*Show this button on medium screens and above*/}
-          <button className=" hidden md:block bg-[#489C24] text-white py-2 px-6 rounded-full hover:bg-[#3f7b1e] focus:outline-none focus:ring-2 focus:ring-green-300">Login</button>
+          <button className=" hidden md:block bg-[#189fd6] text-white py-2 px-6 rounded-full hover:bg-[#3f7b1e] focus:outline-none focus:ring-2 focus:ring-green-300">Login</button>
           {/*Show the picture for the button on mobile*/}
           <button className="md:hidden">
           <img src="/login.svg" alt="Login" className="w-50px h-50px" />

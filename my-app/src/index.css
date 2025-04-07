@@ -7,8 +7,8 @@ body {
   font-family: 'Nobile', Avenir, Helvetica, Arial, sans-serif;
 }
 
-.custom-shadow-green {
-  box-shadow: 0 4px 6px -1px rgba(72, 156, 36, 0.5), 0 2px 4px -1px rgba(72, 156, 36, 0.25);
+.custom-shadow-blue {
+  box-shadow: 0 4px 6px -1px rgba(29, 159, 214, 0.5), 0 2px 4px -1px rgba(29, 159, 214, 0.25);
 }
 
 
