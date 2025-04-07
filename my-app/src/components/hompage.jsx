@@ -50,11 +50,11 @@ function Layout() {
             {/* Background of regular page. Use div with transparent background to see content behind it (also takes up whole viewport) */}
             <div className="absolute inset-0 bg-[#121111] opacity-50"></div> 
             {/*Partial view container for image being rendered in 'fullscreen' */}
-            <div className="relative bg-[#17171A] p-4 rounded shadow-lg w-[96%] md:w-[80%] max-w-[1280px] h-auto max-h-[80vh] flex items-center justify-center">
+            <div className="relative bg-[#17171A] p-4 rounded shadow-lg w-[100%] md:w-[80%] max-w-[1280px] h-auto max-h-[80vh] flex items-center justify-center">
               <img
               src={partialViewImage}
               alt="enlarged view of image clicked on"
-              className="w-full h-auto max-h-[80vh] object-contain rounded-md p-4"
+              className="w-full h-auto max-h-[80vh] object-contain rounded-md md:p-4"
               />
             </div>
           </div>
