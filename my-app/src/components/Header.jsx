@@ -1,11 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import MobileNav from './MobileNav'; // Import needed for mobile hamburger menu
+import { Link } from 'react-router-dom';
+import MobileNav from './mobile-nav'; // Import needed for mobile hamburger menu
 
 function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false); // variables for mobile menu 
   const [showHeader, setShowHeader] = useState(true);
 
+  // for menu to dissapear once user scrolls
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80) { 
@@ -26,17 +28,22 @@ function Header() {
   return (
     <div>
       {showHeader &&(
-      <header className="fixed top-0 w-full h-20 bg-[#121111]">
+      <header className="fixed top-0 w-full h-20 bg-[#121111] mb-40"> {/* added mb-40 */}
         {/*Main header row*/}
         <div className="w-full max-w-screen-xl m-auto flex items-center justify-between p-3 md:px-12 h-auto mt-2rem">
           <img src ="/header_img.svg" alt ="Tech Image" width = "50px" height="50px"/>
           {/* Desktop nav bar section */}
           <nav className="w-full hidden md:flex">  
             <ul className ="w-full flex flex-row justify-around items-center text-white font-bold"> 
-              <li>HOME</li>
-              <li>ABOUT</li>
-              <li>CONTACT</li>
-              <li>TEST</li>
+              <Link to="/">
+                HOME
+              </Link>
+              <Link to="/about">
+                ABOUT
+              </Link>
+              <Link to="/contact">
+                CONTACT
+              </Link>
             </ul>
           </nav>
           {/* Mobile nav bar section*/}
