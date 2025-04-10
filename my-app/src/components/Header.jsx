@@ -28,7 +28,7 @@ function Header() {
   return (
     <div>
       {showHeader &&(
-      <header className="fixed top-0 w-full h-20 bg-[#121111] mb-40"> {/* added mb-40 */}
+      <header className="fixed top-0 w-full h-20 bg-[#121111]"> {/* added mb-40 */}
         {/*Main header row*/}
         <div className="w-full max-w-screen-xl m-auto flex items-center justify-between p-3 md:px-12 h-auto mt-2rem">
           <img src ="/header_img.svg" alt ="Tech Image" width = "50px" height="50px"/>
@@ -41,9 +41,17 @@ function Header() {
               <Link to="/about">
                 ABOUT
               </Link>
+              <Link to="/education">
+                EDUCATION
+              </Link>
               <Link to="/contact">
                 CONTACT
               </Link>
+              <Link to="/socials">
+                SOCIALS
+              </Link>
+
+
             </ul>
           </nav>
           {/* Mobile nav bar section*/}
@@ -65,6 +73,7 @@ function Header() {
         {mobileNavOpen && <MobileNav />}
       </header>
     )}
+     <div className="h-20"></div>
 
   </div>
     
