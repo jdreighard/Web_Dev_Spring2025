@@ -5,7 +5,7 @@ import Header from "./components/header";
 import Home from './components/hompage';
 import About from './components/about';
 import Contact from './components/contact';
-import Education from './compenetns/education';
+import Education from './components/education';
 import Socials from './components/socials';
 
 

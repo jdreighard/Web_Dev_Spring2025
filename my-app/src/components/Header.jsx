@@ -7,7 +7,7 @@ function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false); // variables for mobile menu 
   const [showHeader, setShowHeader] = useState(true);
 
-  // for menu to dissapear once user scrolls
+  // for menu to disappear once user scrolls
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80) { 
@@ -25,10 +25,24 @@ function Header() {
     };
   }, []);
 
+// so if user leaves mobile drop down open, then changes screen size, the variable resets itself to false
+// main reason is for dynamically changing margins based on the users nav bar type
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) { // if window goes past 767 pixels, set variable to false
+        setMobileNavOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
     <div>
       {showHeader &&(
-      <header className="fixed top-0 w-full h-20 bg-[#121111]"> {/* added mb-40 */}
+      <header className="fixed top-0 w-full h-20 bg-[#121111]"> 
         {/*Main header row*/}
         <div className="w-full max-w-screen-xl m-auto flex items-center justify-between p-3 md:px-12 h-auto mt-2rem">
           <img src ="/header_img.svg" alt ="Tech Image" width = "50px" height="50px"/>
@@ -73,8 +87,8 @@ function Header() {
         {mobileNavOpen && <MobileNav />}
       </header>
     )}
-     <div className="h-20"></div>
-
+       {/*if mobileNavOpen is true, add a empty div with margin to dynamically push whatever content is below it */}
+      {mobileNavOpen && <div className="mb-36"></div>}
   </div>
     
   )

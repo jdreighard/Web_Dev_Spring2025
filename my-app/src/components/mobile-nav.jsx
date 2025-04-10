@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 function MobileNav() {
   return (
     <nav className="md:hidden bg-[#121111]">
-      <div className="w-full m-auto bg-[#17171a] h-12">
-        <ul className ="w-full flex flex-row justify-around items-center text-white font-bold h-12">
+      <div className="w-full m-auto bg-[#17171a]">
+        <ul className ="w-full flex flex-col text-white font-bold gap-4 p-3 ">
          <Link to="/">
             HOME
           </Link>
