@@ -78,7 +78,7 @@ function Header() {
           </div>
           
           {/*Show this button on medium screens and above*/}
-          <button className=" hidden md:block bg-[#189fd6] text-white py-2 px-6 rounded-full hover:bg-[#3f7b1e] focus:outline-none focus:ring-2 focus:ring-green-300">Login</button>
+          <button className=" hidden md:block bg-[#093BB0] text-white py-2 px-6 rounded-full hover:bg-[#189fd6] focus:outline-none focus:ring-2">Login</button>
           {/*Show the picture for the button on mobile*/}
           <button className="md:hidden">
           <img src="/login.svg" alt="Login" className="w-50px h-50px" />
@@ -88,7 +88,7 @@ function Header() {
       </header>
     )}
        {/*if mobileNavOpen is true, add a empty div with margin to dynamically push whatever content is below it */}
-      {mobileNavOpen && <div className="mb-36"></div>}
+      {mobileNavOpen && <div className="mb-48"></div>}
   </div>
     
   )

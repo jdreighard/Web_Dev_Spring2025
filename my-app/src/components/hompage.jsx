@@ -8,7 +8,7 @@ function Home() {
   const [partialViewImage, setPartialViewImage] = useState(null); 
   return (
     <div> {/* Parent div so I return only one element*/}
-      <main className ="pt-40"> 
+      <div>
         <div className="max-w-screen-xl w-11/12 mx-auto bg-[#17171A]">  
           <div className="w-full flex justify-center items center flex-col">
             {/* Fishing Gallery */}
@@ -38,7 +38,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
       {/* Setting up partial view over the main page content */}
       {/* Only displays image if partial view is not null */}
       {partialViewImage && (
