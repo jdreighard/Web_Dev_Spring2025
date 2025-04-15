@@ -1,7 +1,7 @@
 import React from 'react'
 function Footer() {
   return(
-    <div className="w-full h-20 border-t-2 border-[#093BB0] mt-28">
+    <footer className="w-full h-20 border-t-2 border-[#093BB0] mt-28">
       <div className="flex flex-col md:flex-row w-full md:space-x-4 max-w-screen-xl m-auto p-4">
         <div className="w-[100%] md:w-[50%] mx-auto flex flex-col justify-center items-center px-4 py-4">
           <h3 className="mb-4 font-extrabold">Copyright</h3>
@@ -15,7 +15,7 @@ function Footer() {
         </div>
      
       </div>        
-  </div>
+  </footer>
 
   )
 }
