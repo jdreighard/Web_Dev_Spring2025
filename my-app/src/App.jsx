@@ -9,7 +9,7 @@ import Education from './components/education';
 import Socials from './components/socials';
 // import Intro from './components/intro';
 import Footer from './components/footer';
-
+import FishGallery from './components/fish-gallery';
 
 
 function App() {
@@ -19,11 +19,12 @@ function App() {
         <Header />
         <main className="flex-grow pt-40">
           <Routes>
-            <Route path="/" element={<Home />} /> {/*quick note: changed to intro from home */}
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/education" element={<Education />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/socials" element={<Socials />} />
+            <Route path="/fishing-gallery" element={<FishGallery />} />
           </Routes>
         </main>
       </BrowserRouter>

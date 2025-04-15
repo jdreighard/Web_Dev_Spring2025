@@ -7,6 +7,11 @@ body {
   font-family: 'Nobile', Avenir, Helvetica, Arial, sans-serif;
 }
 
+a {
+  margin:0;
+  padding:0;
+}
+
 .custom-shadow-blue {
   box-shadow: 0 4px 6px -1px rgba(29, 159, 214, 0.5), 0 2px 4px -1px rgba(29, 159, 214, 0.25);
 }

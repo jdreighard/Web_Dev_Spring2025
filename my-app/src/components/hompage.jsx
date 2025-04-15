@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,15 +15,21 @@ function Home() {
             {/* Fishing Gallery */}
             <div className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] mx-auto bg-[#1F1F23] flex flex-col justify-center items-center p-4 m-6 h-auto custom-shadow-blue">
               <h3 className="font-bold">Fishing Gallery</h3>
-                {/* If image is clicked, set it to the partial view image */}
-                <img src="/main_fish.jpg" alt="fish picture" className="w-[100%] md:w-[96%] lg:w-[90%] 
-                  pt-4 mt-4 max-h-[500px] h-auto rounded-md object-cover"
-                  onClick={() => setPartialViewImage("/main_fish.jpg")} 
+              {/* If image is clicked, set it to the partial view image */}
+              <img src="/main_fish.jpg" alt="fish picture" 
+                className="w-[100%] md:w-[96%] lg:w-[90%] 
+                pt-4 mt-4 max-h-[500px] h-auto rounded-md object-cover"
+                onClick={() => setPartialViewImage("/main_fish.jpg")} 
                 /> 
-              <button className="p-4 m-6 hover:text-[#FFF] hover:border-[#FFF] border border-2 border-[#189fd6]
-                w-60% lg:w-[33.333%] font-bold
-                hover:shadow-[0_0_0_4px_rgba(9,59,176,0.75)] transition-all duration-300 ease-in-out hover:scale-105">SEE MORE
-              </button>
+              
+              <Link to="/fishing-gallery">
+                <button 
+                  className="p-4 m-6 hover:text-[#FFF] hover:border-[#FFF] border border-2 border-[#189fd6]
+                  w-60% lg:w-[33.333%] font-bold
+                  hover:shadow-[0_0_0_4px_rgba(9,59,176,0.75)] transition-all duration-300 ease-in-out hover:scale-105">SEE MORE
+                </button>
+              </Link>
+               
             </div>
             {/* Hunting Gallery */}
             <div className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] mx-auto bg-[#1F1F23] flex flex-col justify-center items-center p-4 m-6 h-auto custom-shadow-blue">
