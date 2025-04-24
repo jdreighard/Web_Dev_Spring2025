@@ -21,3 +21,7 @@ a {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+.custom-height {
+  height:32.5rem;
+}

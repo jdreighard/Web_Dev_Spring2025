@@ -1,131 +1,198 @@
 import React, { useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function FishGallery() {
-  const [partialViewImage, setPartialViewImage] = useState(null);
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <div className="max-w-screen-xl mx-auto p-8">
+      <h1 className="text-2xl font-bold mb-5">Fishing Gallery</h1>
+
+      {/* -------- FIRST SIX IMAGES -------- */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Wrapping each image in a div to enforce aspect ratio */}
-        <div className="relative aspect-w-16 aspect-h-9">
+        <div className="custom-shadow-blue">
           <img
             src="/fish2.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish2.jpg")}
+            alt="Fish"
+            className="w-full aspect-3/4 h-full object-cover"
           />
         </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
+        <div className="custom-shadow-blue"> 
           <img
             src="/fish6.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish6.jpg")}
+            alt="Fish"
+            className="w-full aspect-3/4 h-full object-cover"
           />
         </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
+        <div  className="custom-shadow-blue">
           <img
             src="/fish3.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish3.jpg")}
+            alt="Fish"
+            className="w-full aspect-3/4 h-full object-cover"
           />
         </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
+        <div>
           <img
             src="/fish4.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish4.jpg")}
+            alt="Fish"
+            className="w-full aspect-3/4 h-full object-cover"
           />
         </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
+        <div>
           <img
             src="/fish5.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish5.jpg")}
+            alt="Fish"
+            className="w-full aspect-3/4 h-full object-cover"
           />
         </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
+        <div>
           <img
             src="/fish1.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish1.jpg")}
-          />
-        </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
-          <img
-            src="/fish7.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish7.jpg")}
-          />
-        </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
-          <img
-            src="/fish8.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish8.jpg")}
-          />
-        </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
-          <img
-            src="/fish9.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish9.jpg")}
-          />
-        </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
-          <img
-            src="/fish10.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish10.jpg")}
-          />
-        </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
-          <img
-            src="/fish11.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish11.jpg")}
-          />
-        </div>
-
-        <div className="relative aspect-w-16 aspect-h-9">
-          <img
-            src="/fish12.jpg"
-            alt="Fish Picture located inside fish gallery"
-            className="w-full h-full object-cover"
-            onClick={() => setPartialViewImage("/fish12.jpg")}
+            alt="Fish"
+            className="w-full aspect-3/4 h-full object-cover"
           />
         </div>
       </div>
 
-      {partialViewImage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center" onClick={() => setPartialViewImage(null)}>
-          <div className="absolute inset-0 opacity-50"></div>
-          <div className="relative bg-[rgba(23,23,26,0.8)] p-4 rounded shadow-lg w-[100%] md:w-[90%] max-w-[1280px] h-auto flex items-center justify-center">
-            <img
-              src={partialViewImage}
-              alt="enlarged view of image clicked on"
-              className="w-[50%] h-auto rounded-md md:p-4"
-            />
+      {/* -------- LOAD MORE BUTTON -------- */}
+      {!showMore && (
+        <div>
+          <button
+            onClick={() => setShowMore(true)}
+            className="px-6 py-3 w-2/3 lg:w-1/3 border-2 border-[#189fd6]
+                       font-bold hover:text-white hover:border-white
+                       transition transform hover:scale-105"
+          >
+            LOAD MORE
+          </button>
         </div>
+      )}
+
+      {/* -------- EXTRA IMAGES -------- */}
+      {showMore && (
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div>
+            <LazyLoadImage
+              src="/fish8.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish13.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish9.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish10.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish20.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish12.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish7.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish14.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish15.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish16.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full h-full aspect-3/4 object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish17.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4  h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish18.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish19.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish11.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+          <div>
+            <LazyLoadImage
+              src="/fish21.jpg"
+              alt="Fish"
+              effect="blur"
+              className="w-full aspect-3/4 h-full object-cover"
+            />
+          </div>
+
         </div>
       )}
     </div>
