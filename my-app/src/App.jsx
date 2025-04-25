@@ -7,7 +7,6 @@ import About from './components/about';
 import Contact from './components/contact';
 import Education from './components/education';
 import Socials from './components/socials';
-// import Intro from './components/intro';
 import Footer from './components/footer';
 import FishGallery from './components/fish-gallery';
 
