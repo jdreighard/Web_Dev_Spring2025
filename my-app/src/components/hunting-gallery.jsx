@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-function FishGallery() {
+function HuntingGallery() {
   const [showMore, setShowMore] = useState(false);
   const base = import.meta.env.BASE_URL;  
 
   return (
     <div className="max-w-screen-xl mx-auto p-8">
-      <h1 className="text-2xl font-bold mb-5">Fishing Gallery</h1>
+      <h1 className="text-2xl font-bold mb-5">Hunting Gallery</h1>
 
       {/* -------- FIRST SIX IMAGES -------- */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -112,4 +112,4 @@ function FishGallery() {
   );
 }
 
-export default FishGallery;
+export default HuntingGallery;

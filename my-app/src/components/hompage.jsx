@@ -23,9 +23,8 @@ function Home() {
                 /> 
               
               <Link to="/fishing-gallery">
-                <button 
-                  className="p-4 m-6 hover:text-[#FFF] hover:border-[#FFF] border border-2 border-[#189fd6]
-                  w-60% lg:w-[33.333%] font-bold
+                <button className="p-4 m-6 hover:text-[#FFF] hover:border-[#FFF] border border-2 border-[#189fd6]
+                  w-60% lg:w-[50%] font-bold
                   hover:shadow-[0_0_0_4px_rgba(9,59,176,0.75)] transition-all duration-300 ease-in-out hover:scale-105">SEE MORE
                 </button>
               </Link>
@@ -38,10 +37,13 @@ function Home() {
               <img src="/main_hunting.jpg" alt="bird hunting picture" className="w-[100%] md:w-[96%] 
                 lg:w-[90%] pt-4 mt-4 h-auto rounded-md object-cover max-h-[500px]"
                 onClick={() => setPartialViewImage("/main_hunting.jpg")}/>
-              <button className="p-4 m-6 hover:text-[#FFF] hover:border-[#FFF] border border-2 border-[#189fd6]
-                w-60% lg:w-[33.333%] font-bold
-                hover:shadow-[0_0_0_4px_rgba(9,59,176,0.75)] transition-all duration-300 ease-in-out hover:scale-105">SEE MORE
-              </button>
+
+              <Link to="/hunting-gallery">
+                <button className="p-4 m-6 hover:text-[#FFF] hover:border-[#FFF] border border-2 border-[#189fd6]
+                  w-60% lg:w-[50%] font-bold
+                  hover:shadow-[0_0_0_4px_rgba(9,59,176,0.75)] transition-all duration-300 ease-in-out hover:scale-105">SEE MORE
+                </button>
+              </Link>
             </div>
           </div>
         </div>
