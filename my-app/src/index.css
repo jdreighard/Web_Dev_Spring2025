@@ -16,8 +16,15 @@ a {
   box-shadow: 0 4px 6px -1px rgba(29, 159, 214, 0.5), 0 2px 4px -1px rgba(29, 159, 214, 0.25);
 }
 
+.picture-shadow {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05),
+              0 4px 6px rgba(255, 255, 255, 0.08),
+              0 0 12px rgba(255, 255, 255, 0.12);
+}
 
-
+.border-bottom-grey {
+  box-shadow: 0 4px 6px -2px rgba(200, 200, 200, 0.3); /* soft gray bottom glow */
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }

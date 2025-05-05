@@ -48,7 +48,7 @@ function Header() {
           <img src ="/header_img.svg" alt ="Tech Image" width = "50px" height="50px"/>
           {/* Desktop nav bar section */}
           <nav className="w-full hidden md:flex">  
-            <ul className ="w-full flex flex-row justify-around items-center text-white font-bold md:text-l lg:text-xl"> 
+            <ul className ="w-full flex flex-row justify-around items-center font-bold md:text-l lg:text-xl"> 
               <Link to="/">
                 HOME
               </Link>
