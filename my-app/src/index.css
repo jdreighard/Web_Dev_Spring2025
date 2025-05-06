@@ -23,12 +23,8 @@ a {
 }
 
 .border-bottom-grey {
-  box-shadow: 0 4px 6px -2px rgba(200, 200, 200, 0.3); /* soft gray bottom glow */
+  box-shadow: 0 4px 6px -2px rgba(200, 200, 200, 0.3); 
 }
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-.custom-height {
-  height:32.5rem;
 }

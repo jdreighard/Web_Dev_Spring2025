@@ -7,7 +7,7 @@ function Education() {
         <h1 className="text-3xl font-bold text-center mb-8">School</h1>
         <div className="w-[90%] md:w-[80%] lg:w-[70%] mx-auto p-6">
           <h2 className="text-xl font-bold border-b-2 border-[#093BB0] w-fit">High School</h2>
-          </div>
+        </div>
 
         {/* Content Box */}
         <div className="w-[90%] md:w-[80%] lg:w-[70%] bg-[#1F1F23] rounded-lg custom-shadow-blue mx-auto mb-6 p-6">

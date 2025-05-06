@@ -10,11 +10,11 @@ function Header() {
   // for menu to disappear once user scrolls
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 80) { 
+      if (window.scrollY > 80) {  // hide header at 81 or more
         setShowHeader(false);
       } 
       else {
-          setShowHeader(true);
+          setShowHeader(true); // show at 80 or less for 
       }
     };
 
@@ -36,7 +36,7 @@ function Header() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, []); // empty dependency array
 
 
   return (
@@ -44,44 +44,38 @@ function Header() {
       {showHeader &&(
       <header className="fixed top-0 w-full h-20 bg-[#121111]"> 
         {/*Main header row*/}
-        <div className="w-full max-w-screen-xl m-auto flex items-center justify-between p-3 md:px-12 h-auto mt-2rem">
+        <div className="w-full max-w-screen-xl m-auto flex items-center justify-between p-3 md:px-12 h-auto mt-8">
           <img src ="/header_img.svg" alt ="Tech Image" width = "50px" height="50px"/>
           {/* Desktop nav bar section */}
           <nav className="w-full hidden md:flex">
-            <ul className="w-full flex flex-row justify-around items-center font-bold md:text-lg lg:text-xl p-5">
-              {/* motion-safe:hover:animate-bounce ensures bounce only runs on hover and if user allows motion */}
-              <Link
-                to="/"
-                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
-              >
-                HOME
-              </Link>
-              <Link
-                to="/about"
-                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
-              >
-                ABOUT
-              </Link>
-              <Link
-                to="/education"
-                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
-              >
-                EDUCATION
-              </Link>
-              <Link
-                to="/contact"
-                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
-              >
-                CONTACT
-              </Link>
-              <Link
-                to="/socials"
-                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
-              >
-                SOCIALS
-              </Link>
-            </ul>
-          </nav>
+              <ul className="w-full flex flex-row justify-around items-center font-bold md:text-lg lg:text-xl p-5">
+                <li>
+                  <Link to="/">
+                    HOME
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about">
+                    ABOUT
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/education">
+                    EDUCATION
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact">
+                    CONTACT
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/socials">
+                    SOCIALS
+                  </Link>
+                </li>
+              </ul>
+            </nav>
 
           {/* Mobile nav bar section*/}
           <div className="flex justify-center content-center m-auto">
@@ -99,10 +93,11 @@ function Header() {
           
           {/*Show the picture for the button on mobile*/}
           <button className="md:hidden">
-          <img src="/login.svg" alt="Login" className="w-50px h-50px" />
+          <img src="/login.svg" alt="Login" className="w-[50px] h-[50px]" />
           </button>
         </div>
-        {mobileNavOpen && <MobileNav />}
+        {mobileNavOpen &&
+         <MobileNav />}
       </header>
     )}
        {/*if mobileNavOpen is true, add a empty div with margin to dynamically push whatever content is below it */}

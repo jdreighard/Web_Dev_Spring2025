@@ -12,7 +12,7 @@ function Home() {
       <div className="max-w-screen-xl w-11/12 mx-auto bg-[#17171A] picture-shadow py-10 rounded-xl">  
         <h1 className="text-2xl font-bold mx-10 text-center">JDs pimpin webpage</h1>
         <p className="font-bold my-5 mx-10 text-center">have a look around!</p>
-        <div className="w-full flex justify-center items center flex-col">
+        <div className="w-full flex justify-center items-center flex-col">
           {/* Fishing Gallery */}
           <div className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] mx-auto bg-[#1F1F23] flex flex-col justify-center items-center p-4 m-6 h-auto custom-shadow-blue">
             <h3 className="text-xl font-bold">Fishing Gallery</h3>

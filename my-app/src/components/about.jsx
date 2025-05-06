@@ -5,7 +5,7 @@ function About() {
     <div className="max-w-screen-xl mx-auto pb-20 w-[96%] sm:w-[80%] md:w-[60%] lg:w-[50%]">
       <div className="flex flex-col justify-center items-center bg-[#17171A] p-10 rounded-xl picture-shadow">
         <div className="inline-block text-right bg-[#1F1F23] p-6 rounded-lg custom-shadow-blue w-full">
-          <h1 className="border-b-4 border-[#189fd6] font-bold text-3xl md:text-5xl text-center text-white mb-4">
+          <h1 className="border-b-4 border-[#189fd6] font-bold text-3xl md:text-5xl text-center mb-4">
             JD Reighard
           </h1>
 
