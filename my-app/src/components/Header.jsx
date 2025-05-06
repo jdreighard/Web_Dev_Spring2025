@@ -47,27 +47,42 @@ function Header() {
         <div className="w-full max-w-screen-xl m-auto flex items-center justify-between p-3 md:px-12 h-auto mt-2rem">
           <img src ="/header_img.svg" alt ="Tech Image" width = "50px" height="50px"/>
           {/* Desktop nav bar section */}
-          <nav className="w-full hidden md:flex">  
-            <ul className ="w-full flex flex-row justify-around items-center font-bold md:text-l lg:text-xl"> 
-              <Link to="/">
+          <nav className="w-full hidden md:flex">
+            <ul className="w-full flex flex-row justify-around items-center font-bold md:text-lg lg:text-xl p-5">
+              {/* motion-safe:hover:animate-bounce ensures bounce only runs on hover and if user allows motion */}
+              <Link
+                to="/"
+                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
+              >
                 HOME
               </Link>
-              <Link to="/about">
+              <Link
+                to="/about"
+                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
+              >
                 ABOUT
               </Link>
-              <Link to="/education">
+              <Link
+                to="/education"
+                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
+              >
                 EDUCATION
               </Link>
-              <Link to="/contact">
+              <Link
+                to="/contact"
+                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
+              >
                 CONTACT
               </Link>
-              <Link to="/socials">
+              <Link
+                to="/socials"
+                className="transition duration-500 px-3 motion-safe:hover:animate-bounce"
+              >
                 SOCIALS
               </Link>
-
-
             </ul>
           </nav>
+
           {/* Mobile nav bar section*/}
           <div className="flex justify-center content-center m-auto">
             <button 
@@ -78,7 +93,10 @@ function Header() {
           </div>
           
           {/*Show this button on medium screens and above*/}
-          <button className=" hidden md:block bg-[#093BB0] text-white py-2 px-6 rounded-full hover:bg-[#189fd6] focus:outline-none focus:ring-2">Login</button>
+          <Link to="/login">
+            <button className=" hidden md:block bg-[#093BB0] text-white py-2 px-6 rounded-full hover:bg-[#189fd6] focus:outline-none focus:ring-2">Login</button>
+          </Link>
+          
           {/*Show the picture for the button on mobile*/}
           <button className="md:hidden">
           <img src="/login.svg" alt="Login" className="w-50px h-50px" />

@@ -10,6 +10,7 @@ import Socials from './components/socials';
 import Footer from './components/footer';
 import FishGallery from './components/fish-gallery';
 import HuntingGallery from './components/hunting-gallery';
+import Login from './components/login';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/socials" element={<Socials />} />
             <Route path="/fishing-gallery" element={<FishGallery />} />
             <Route path="/hunting-gallery" element={<HuntingGallery />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
       </BrowserRouter>
